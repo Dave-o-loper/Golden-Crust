@@ -1,0 +1,227 @@
+.footer {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer__header {
+    font-family: "Charm", serif;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.footer__nav__links a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-family: "Gabriela", serif;
+    color: black;
+    font-size: 1.1em;
+}
+
+.footer__nav__links a:hover {
+    color: orangered;
+    transition: .5s;
+    transform: scale(1);
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+.footer__icons {
+    margin: 20px 0;
+}
+
+.footer__icons i {
+    color: black;
+    font-size: 1.8em;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.footer__icons i:hover {
+    color: orangered;
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+.rate__us {
+    margin-top: 20px;
+}
+
+.rate__us h1 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rating label {
+    cursor: pointer;
+    margin: 5px;
+}
+
+.rating svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .footer__header {
+        font-size: 1.6em;
+    }
+
+    .footer__nav__links a {
+        font-size: 1em;
+    }
+
+    .footer__icons i {
+        font-size: 1.6em;
+    }
+
+    .rate__us h1 {
+        font-size: 1.2em;
+    }
+
+    .rating svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__header {
+        font-size: 1.4em;
+    }
+
+    .footer__nav__links a {
+        font-size: 0.9em;
+    }
+
+    .rate__us h1 {
+        font-size: 1em;
+    }
+
+    .rating svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Rating specific css */
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    /* Adjust margin to fit with new footer changes*/
+    gap: 0.3rem;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label .svgOne {
+    stroke: black;
+    fill: rgba(255, 217, 0, 0);
+    transition: stroke 0.5s ease, fill 0.5s ease;
+}
+
+.rating label .svgTwo {
+    position: absolute;
+    top: -1px;
+    fill: gold;
+    stroke: rgba(255, 217, 0, 0);
+    opacity: 0;
+    transition: stroke 0.5s ease, fill 0.5s ease, opacity 0.5s ease;
+}
+
+.rating label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    transition: all 0.5s ease;
+}
+
+.rating label:hover .svgOne,
+.rating label:hover~label .svgOne {
+    stroke: gold;
+}
+
+.rating input:checked~label .svgOne {
+    stroke: #cccccc00;
+}
+
+.rating input:checked~label .svgTwo {
+    transform: rotateX(0deg) rotateY(0deg) translateY(0px);
+    opacity: 1;
+    animation: displayStar 0.5s cubic-bezier(0.75, 0.41, 0.82, 1.2);
+}
+
+@keyframes displayStar {
+    0% {
+        transform: rotateX(100deg) rotateY(100deg) translateY(10px);
+    }
+
+    100% {
+        transform: rotateX(0deg) rotateY(0deg) translateY(0px);
+    }
+}
+
+.ombre {
+    background: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0));
+    width: 30px;
+    height: 8px;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.2s;
+}
+
+.rating label:hover .ombre,
+.rating label:hover~label .ombre {
+    opacity: 0.3;
+}
+
+.rating input:checked~label .ombre {
+    opacity: 1;
+}
+
+.rating label:hover .svgTwo:hover {
+    animation: chackStar 0.6s ease-out, displayStar none 1s;
+}
+
+@keyframes chackStar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    80% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

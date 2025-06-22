@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAKERY</title>
+    <link rel="stylesheet" href="bakery.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="about-us.css">
+    <link rel="stylesheet" href="customer.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="chef.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKB4Imkb9UGI1O+z0h/9npQmCp3F5ZKpSloVJk9J7pM0RmfHHKx0YNuA4ItgN+9ZgPzC39z5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!--BAKERY HEADER-->
+    <div class="home">
+        <section id="home">
+             <div class="header">
+        <h1 class="bakery__header">
+            <a href="#">The Golden Crust</a>
+        </h1>
+        </div>
+    <nav class="navbar">
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav__links">
+            <a href="#" class="hover-underline-animation">Home</a>
+            <a href="#" class="hover-underline-animation">Gallery</a>
+            <a href="#" class="hover-underline-animation">Chef's Recommendations</a>
+            <a href="#about__us" class="hover-underline-animation">About Us</a>
+            <a href="#customer-Reviews" class="hover-underline-animation">Customers' Reviews</a>
+            <a href="#contacts" class="hover-underline-animation">Contact Us</a>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+                const hamburgerMenu = document.querySelector('.hamburger-menu');
+                const navLinks = document.querySelector('.nav__links');
+
+                hamburgerMenu.addEventListener('click', () => {
+                    hamburgerMenu.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            });
+    </script>
+    
+    <div class="main__content">
+        <p class="content__paragraph">
+            Freshly And Delicious Delicacies
+        </p>
+        <h1 class="content__header">
+            Have A Taste Of The <span>Best</span> <br> And <span> Freshly </span>Baked Delights
+        </h1>
+    <div class="content__btn">
+        <a href="#" class="order-now">Order Now</a>
+        <a href="#" class="our-menu">Our Menu</a>
+    </div>
+    </div>
+       </section>
+        </div>
+
+        <!--ABOUT US-->
+       
+       <div class="about__container">
+       <section id="about__us">
+        <div class="about__header">
+            <h2>ABOUT US</h2>
+        </div>
+         <div class="about__img">
+            <img src="images/pexels-valeriya-10865978.jpg" alt="">
+            
+          
+            <div class="about__header">
+                <h2>OUR STORY</h2>
+            </div>
+
+            <div class="about__paragraph">
+                 <p>
+                    Welcome to The Golden Crust ! Our story began in 2022,
+                    a time when the world was navigating unprecedented challenges.<br><br>Even during the Covid lockdown,
+                    we saw an opportunity to bring comfort and joy through the simple pleasure of freshly baked goods.<br>With strict
+                    adherence to safety guidelines,
+                    we started our journey,
+                    determined to deliver warmth and deliciousness to homes far and wide,
+                    across the country.<br>The Golden Crust is more than just a bakery;
+                    it's a symbol of community and connection, forged during a time of
+                    isolation.<br>We're honored to have shared our baked goods with you, and we look forward to continuing to serve you for
+                    years to
+                    come.<br><br>Thank you for being a part of The Golden Crust's story.
+                </p>
+            </div>
+               
+        </div> 
+       </section>
+       </div>
+      
+       
+        <!--CUSTOMER REVIEWS-->
+        <div class="customer__reviews">
+            <section id="customer-Reviews">
+                <h1 class="review__header">
+                    Customers' Review
+                </h1>
+                <div class="review__card">
+                    <div class="card__container">
+                        <div class="card">
+                            <div class="card__front">
+                                <h1>
+                                Highly Recommended!
+                                </h1>
+                            </div>
+                            <div class="card__back">
+                                The pastries here are absolutely amazing!<br>
+                                Freshly baked, full of flavor, and always served with a smile.<br>
+                                I can’t imagine going anywhere else for my morning treat!
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__front">
+                                <h1>
+                                    Money Well Spent!
+                                </h1>
+                            </div>
+                            <div class="card__back">
+                            Every bite was worth it!<br>
+                            The quality of ingredients, the soft and buttery texture,<br>
+                            and the perfect sweetness make this bakery stand out.<br>
+                            Definitely worth every penny!
+                        </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__front">
+                                <h1>
+                                    Will Definitely Come Back!
+                                </h1>
+                            </div>
+                            <div class="card__back">
+                                I tried their croissants and cakes, and wow!<br>
+                                The texture, the taste, and the presentation were all perfect.<br>
+                                I’m already planning my next visit!
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__front">
+                                <h1>
+                                    Delicious & Fresh!
+                                </h1>
+                            </div>
+                            <div class="card__back">
+                            Every pastry I’ve tried is always fresh and full of flavor!<br>
+                            The bread is soft, the cakes are moist, and the cookies are just perfect.<br>
+                            Highly recommend for any sweet tooth!
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__front">
+                                <h1>
+                                    Best Bakery in Town!
+                                </h1>
+                            </div>
+                            <div class="card__back">
+                            I’ve been to many bakeries, but this one stands out!<br>
+                            The variety, the quality, and the friendly service keep me coming back.<br>
+                            Absolutely love their cinnamon rolls!
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__front">
+                                <h1>
+                                Perfect for Any Occasion!
+                                </h1>
+                            </div>
+                            <div class="card__back">
+                                Ordered a custom cake for my birthday, and it was stunning!<br>
+                                Not only did it look amazing, but it also tasted incredible.<br>
+                                This bakery knows how to impress!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!--CONTACTS
+           AND PAYMENTS-->
+      <div class="contacts">
+    <section id="contacts">
+     <div class="container">
+        <h1>Connect With Us</h1>
+        <p>
+        We are always here to help! <br>
+        For delivery inquiries, please call us at 1-800-DELIVERY. <br>
+        For feedback or suggestions, email us at feedback@example.com. <br>
+        You can also visit our FAQ page for quick answers to common questions. </p>
+    
+     <div class="contact__box">
+        <div class="contact__left">
+        <h3>Send Your Request</h3>
+        <form>
+            <div class="input__row">
+                <div class="input__group">
+                    <label>Name</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+                <div class="input__group">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="+254(0)712345678">
+                </div>
+            </div>
+            <div class="input__row">
+                <div class="input__group">
+                    <label>Email</label>
+                    <input type="email" placeholder="johndoe@gmail.com">
+                </div>
+                <div class="input__group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Subject">
+                </div>
+            </div>
+        </form>
+        <label>Message</label>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">SEND</button>
+        </div>
+        <div class="contact__right">
+            <h3>Reach Us</h3>
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td>contactus@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>+254(0)712345678</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>#355, Third Floor,Room No.8</td>
+                </tr>
+            </table>
+        </div> 
+    </div>
+     </div>
+    </section>
+ </div>
+
+        <!--FOOTER-->
+
+        <div class="footer">
+            <section id="footer__id">
+                <div class="footer__header">
+                    <h1>
+                        The Golden Crust
+                    </h1>
+                </div>
+                <div class="footer__nav__links">
+                    <a href="#home">Home</a>
+                    <a href="#about__us">Our Story</a>
+                    <a href="#">Online Orders</a>
+                    <a href="#contacts">Contacts</a>
+                </div>
+                <div class="footer__icons">
+                    <i class='bx bxl-gmail'></i>
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-instagram'></i>
+                </div>
+                <!-- RATE US -->
+                <div class="rate__us">
+                    <h1>
+                        Rate Us
+                    </h1>
+                </div>
+                <div class="rating">
+                    <input value="5" name="rating" id="star5" type="radio" />
+                    <label title="5 stars" for="star5">
+                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000" fill="none"
+                            viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg" class="svgOne">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000" fill="none"
+                            viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg" class="svgTwo">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        <div class="ombre"></div>
+                    </label>
+                
+                    <input value="4" name="rating" id="star4" type="radio" />
+                    <label title="4 stars" for="star4">
+                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000" fill="none"
+                            viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg" class="svgOne">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000" fill="none"
+                            viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg" class="svgTwo">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        <div class="ombre"></div>
+                    </label>
+                
+                    <input value="3" name="rating" id="star3" type="radio" />
+                    <label title="3 stars" for="star3">
+                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000" fill="none"
+                            viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg" class="svgOne">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000" fill="none"
+                            viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg" class="svgTwo">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        <div class="ombre"></div>
+                    </label>
+                
+                    <input value="2" name="rating" id="star2" type="radio" />
+                    <label title="2 stars" for="star2">
+                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000" fill="none"
+                            viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg" class="svgOne">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000" fill="none"
+                            viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg" class="svgTwo">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        <div class="ombre"></div>
+                    </label>
+                
+                    <input value="1" name="rating" id="star1" type="radio" />
+                    <label title="1 star" for="star1">
+                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000" fill="none"
+                            viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg" class="svgOne">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#000000" fill="none"
+                            viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg" class="svgTwo">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                        <div class="ombre"></div>
+                    </label>
+                </div>
+
+            </section>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                    // Smooth scrolling for anchor links within the same page
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
+
+                            const target = document.querySelector(this.getAttribute('href'));
+
+                            if (target) {
+                                target.scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+                        });
+                    });
+
+                    // Smooth scrolling for section elements (if you need to scroll to them directly)
+                    document.querySelectorAll('section[id]').forEach(section => {
+                        // Add a data attribute or other method to trigger the scroll.
+                        // For example, you could add a data-scroll attribute to the sections you want to scroll to.
+                        if (section.dataset.scroll) {
+                            section.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                this.scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            })
+                        }
+                    });
+
+                    //Optional: Add a scroll to top button:
+                    const scrollToTopButton = document.createElement('button');
+                    scrollToTopButton.textContent = 'Scroll to Top';
+                    scrollToTopButton.style.position = 'fixed';
+                    scrollToTopButton.style.bottom = '20px';
+                    scrollToTopButton.style.right = '20px';
+                    scrollToTopButton.style.display = 'none'; // Initially hidden
+                    document.body.appendChild(scrollToTopButton);
+
+                    window.addEventListener('scroll', () => {
+                        if (window.scrollY > 300) { // Show button after scrolling a bit
+                            scrollToTopButton.style.display = 'block';
+                        } else {
+                            scrollToTopButton.style.display = 'none';
+                        }
+                    });
+
+                    scrollToTopButton.addEventListener('click', () => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                });
+        </script>
+</body>
+</html>

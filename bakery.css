@@ -1,0 +1,523 @@
+   @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Gabriela&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bakery__header {
+    font-family: "Charm", "Gabriela", serif;
+    font-size: 35px;
+    margin-left: 35px;
+}
+
+.bakery__header a {
+    text-decoration: none;
+    color: orangered;
+}
+
+.header a {
+    font-size: 27px;
+    background-image: url(images/hotels-two.webp);
+    background-size: 200% auto;
+    background-repeat: repeat-x;
+    background-position: 0 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: textAnimation 6s linear infinite;
+}
+
+@keyframes textAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.nav__links {
+    display: flex;
+    justify-content: center;
+}
+
+.nav__links a {
+    margin: 15px;
+    text-decoration: none;
+    font-family: "Gabriela", serif;
+    color: black;
+    font-size: large;
+}
+
+.nav__links a:hover {
+    color: orangered;
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: orangered;
+    padding-bottom: 5px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: orangered;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav__links a:hover {
+    color: orangered;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.main__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%; /* Adjusted width */
+}
+
+.content__paragraph {
+    margin-top: 15px;
+    font-family: "Gabriela", serif;
+    font-size: 1.2em; /* Adjusted font size */
+}
+
+.content__header {
+    margin-top: 15px;
+    font-family: "Gabriela", serif;
+    font-weight: 100;
+    font-size: 2.5em; /* Adjusted font size */
+    line-height: 1.2; /* Adjusted line height */
+}
+
+.content__btn {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Added flex wrap */
+}
+
+.content__btn a {
+    margin: 10px; /* Adjusted margin */
+    text-decoration: none;
+    font-family: "Gabriela", serif;
+    font-size: 1em; /* Adjusted font size */
+    font-weight: 100;
+    color: black; /* Adjusted color */
+    background: transparent; /* Adjusted background */
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid orangered; /* Adjusted border */
+    transition: 0.5s;
+}
+
+.content__btn a:hover {
+    box-shadow: inset 0px 0px 25px orangered;
+    transform: scale(1.1);
+    color: black;
+}
+
+.home {
+    background: url(images/different-kinds-fresh-bread-as-background-top-view.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 115vh;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav__links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        background-color: white;
+    }
+
+    .nav__links.active {
+        display: flex;
+    }
+
+    .nav__links a {
+        margin: 0;
+        padding: 1rem 0;
+        border-top: 1px solid #ddd;
+        background-color: transparent;
+        color: black;
+    }
+
+    .nav__links a:hover {
+        background-color: transparent;
+    }
+
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .bakery__header {
+        font-size: 30px;
+        margin-left: 15px;
+    }
+
+    .content__paragraph {
+        font-size: 1em;
+    }
+
+    .content__header {
+        font-size: 2em;
+    }
+
+    .content__btn a {
+        width: 120px;
+        font-size: large;
+    }
+
+    .home {
+        height: auto; /* Allow height to adjust */
+        min-height: 100vh; /* Ensure it covers the viewport */
+    }
+}
+
+@media (max-width: 480px) {
+    .bakery__header {
+        font-size: 25px;
+    }
+
+    .content__paragraph {
+        font-size: 0.9em;
+    }
+
+    .content__header {
+        font-size: 1.8em;
+    }
+
+    .content__btn a {
+        width: 100px;
+        font-size: large;
+    }
+}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contacts {
+    background: rgb(219, 219, 226);
+    font-size: 14px;
+    margin-top: -51px;
+    padding: 20px 0; /* Added padding */
+}
+
+.container {
+    width: 90%; /* Adjusted width */
+    margin: 30px auto; /* Adjusted margin */
+    max-width: 1200px; /* Added max-width */
+}
+
+.container h1 {
+    font-size: 2.2em; /* Adjusted font size */
+    font-family: "Charm", "Gabriela", serif;
+    text-align: center; /* Centered heading */
+}
+
+.container p {
+    font-family: "Gabriela", serif;
+    font-size: 1.1em; /* Adjusted font size */
+    line-height: 1.6; /* Added line-height */
+    text-align: center; /* Centered paragraph */
+    margin: 20px 0 30px; /* Adjusted margin */
+}
+
+.contact__box {
+    background: white;
+    display: flex;
+    flex-wrap: wrap; /* Added flex-wrap */
+    border-radius: 8px; /* Added border radius */
+    overflow: hidden; /* Added overflow hidden */
+}
+
+.contact__left {
+    flex-basis: 60%;
+    padding: 30px; /* Adjusted padding */
+    font-family: "Gabriela", serif;
+}
+
+.contact__right {
+    flex-basis: 40%;
+    padding: 30px; /* Adjusted padding */
+    background: orangered;
+    color: white;
+    font-family: "Gabriela", serif;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.input__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input__row .input__group {
+    flex-basis: 48%; /* Adjusted flex-basis */
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+    height: 40px; /* Adjusted height */
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Gabriela", serif;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom: 3px solid orangered;
+    transition: .5s;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: "Gabriela", serif;
+    text-align: center;
+    height: 120px; /* Adjusted height */
+}
+
+label {
+    margin-bottom: 6px;
+    display: block;
+    color: black;
+}
+
+button {
+    background: orangered;
+    border: none; /* Changed border */
+    cursor: pointer;
+    width: 120px; /* Adjusted width */
+    outline: none;
+    color: #fff;
+    height: 40px; /* Adjusted height */
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+button:hover {
+    box-shadow: 0 5px 15px rgba(28, 0, 181, 0.3); /* Adjusted shadow */
+    transition: .3s; /* Adjusted transition */
+    transform: translateY(-3px); /* Adjusted transform */
+}
+
+.contact__left h3,
+.contact__right h3 {
+    font-weight: 600;
+    margin-bottom: 25px; /* Adjusted margin */
+    font-size: 1.6em; /* Adjusted font size */
+    text-align: center; /* Centered headings */
+}
+
+tr td:first-child {
+    padding-right: 20px;
+}
+
+tr td {
+    padding-top: 15px; /* Adjusted padding */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact__left,
+    .contact__right {
+        flex-basis: 100%; /* Full width on smaller screens */
+        padding: 20px;
+    }
+
+    .input__row {
+        flex-direction: column; /* Stack input groups */
+    }
+
+    .input__row .input__group {
+        flex-basis: 100%; /* Full width input groups */
+        margin-bottom: 15px;
+    }
+
+    .container h1 {
+        font-size: 2em;
+    }
+
+    .container p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 1.8em;
+    }
+
+    .container p {
+        font-size: 0.9em;
+    }
+
+    input, textarea {
+        height: 35px;
+        font-size: 0.9em;
+    }
+
+    button {
+        width: 100px;
+        height: 35px;
+    }
+}
+    .review__header {
+       text-align: center;
+       font-family: "Charm", "Gabriela", serif;
+       color: white;
+       font-size: xx-large;
+    }
+
+   
+        .card__container {
+          display: flex;
+          flex-wrap: wrap;
+          /* Allows wrapping if space is limited */
+          justify-content: center;
+          gap: 20px;
+          perspective: 1000px;
+          margin: 20px auto;
+          max-width: 1000px;
+          /* Adjusted for larger cards */
+        }
+    
+        .card {
+          display: inline-block;
+          margin: 15px;
+          width: 250px;
+          /* Increased width */
+          height: 250px;
+          /* Increased height */
+          position: relative;
+          transform-style: preserve-3d;
+          transition: transform 0.6s ease-in-out;
+          cursor: pointer;
+        }
+    
+        .card:hover {
+          transform: rotateY(180deg) scale(1.1);
+          border-radius: 15px;
+        }
+    
+        .card__front,
+        .card__back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 18px;
+          /* Increased font size */
+          border-radius: 15px;
+          color: white;
+          padding: 15px;
+          /* Increased padding for better spacing */
+        }
+    
+        .card__front {
+          background: transparent;
+          background: url(images/backgr.jpg);
+          border: 1px solid black;
+          color: white;
+          font-family: "Charm", "Gabriela", serif;
+        }
+    
+        .card__back {
+          background: transparent;
+          background: url(images/backgr.jpg);
+          border: 1px solid black;
+          color: white;
+          transform: rotateY(180deg);
+          font-family: "Gabriela", serif;
+        }
+
+        .customer__reviews {
+             background: url(images/backgr.jpg);
+             background-size: cover;
+              background-repeat: no-repeat;
+              height: 115vh;
+        }
